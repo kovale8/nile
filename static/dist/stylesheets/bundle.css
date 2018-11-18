@@ -1,5 +1,5 @@
 header {
-  background-color: #004d80;
+  background-color: #333;
   color: white;
   padding: 50px;
   box-shadow: 0 2px 4px 2px #aaa;
@@ -32,7 +32,7 @@ main a:hover {
 }
 
 header {
-  background-color: #004d80;
+  background-color: #333;
   color: white;
   padding: 50px;
   box-shadow: 0 2px 4px 2px #aaa;
@@ -64,8 +64,42 @@ header h1 {
   margin-bottom: 0.5em;
 }
 
+#product_reviews {
+  margin: 1em;
+}
 #product_reviews h1 {
   font-size: 2em;
+  margin-bottom: 1.5em;
+}
+#product_reviews h2 {
+  margin-bottom: 1em;
+}
+#product_reviews form button {
+  padding: 10px;
+  color: white;
+  background-color: #333;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+#product_reviews form input, #product_reviews form textarea {
+  font: 1.25em sans-serif;
+  width: 500px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+#product_reviews form label {
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+#product_reviews form textarea {
+  vertical-align: top;
+  height: 10em;
+}
+#product_reviews form .form_element {
+  margin-bottom: 1.5em;
 }
 
 #product_view {
