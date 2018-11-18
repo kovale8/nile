@@ -1,0 +1,38 @@
+#product_view {
+    display: flex;
+    margin-top: 2em;
+
+    img {
+        height: 40em;
+        padding: 2px;
+    }
+
+    .name {
+        font-size: 3em;
+        font-weight: 500;
+        margin-bottom: .25em;
+    }
+
+    .overview {
+        width: 100%;
+    }
+
+    .price {
+        display: flex;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        color: #333;
+
+        span {
+            margin-left: .5em;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #B12704;
+        }
+    }
+
+    .title {
+        margin-bottom: 3em;
+        border-bottom: 2px solid #ddd;
+    }
+}

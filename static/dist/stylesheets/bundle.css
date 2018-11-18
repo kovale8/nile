@@ -50,9 +50,6 @@ header h1 {
   height: 20em;
   padding: 2px;
 }
-#product_list .description {
-  color: #333;
-}
 #product_list .details {
   padding: 2em;
 }
@@ -65,6 +62,39 @@ header h1 {
   font-size: 2em;
   font-weight: 500;
   margin-bottom: 0.5em;
+}
+
+#product_view {
+  display: flex;
+  margin-top: 2em;
+}
+#product_view img {
+  height: 40em;
+  padding: 2px;
+}
+#product_view .name {
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 0.25em;
+}
+#product_view .overview {
+  width: 100%;
+}
+#product_view .price {
+  display: flex;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  color: #333;
+}
+#product_view .price span {
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #B12704;
+}
+#product_view .title {
+  margin-bottom: 3em;
+  border-bottom: 2px solid #ddd;
 }
 
 /*# sourceMappingURL=bundle.css.map */
