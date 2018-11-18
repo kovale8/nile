@@ -1,5 +1,5 @@
-const products = require('../services/products');
-const reviews = require('../services/reviews');
+const products = require('./services/products');
+const reviews = require('./services/reviews');
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
@@ -11,12 +11,19 @@ router.get('/', (req, res) => {
     }));
 });
 
-router.get('/product/:id', (req, res) => {
-    products.get(req.params.id)
-    .then(product => res.render('product', {
-        title: `: ${product.name}`,
-        product
-    }));
+router.get('/product/:id', async (req, res) => {
+    const product = await products.get(req.params.id);
+    const productReviews = await reviews.query(`
+        SELECT *
+        FROM ${reviews.table}
+        WHERE product_id = ?
+    `, [product.id]);
+
+    res.render('product', {
+        title:  `: ${product.name}`,
+        product,
+        reviews: productReviews
+    })
 });
 
 router.route('/review/:id')

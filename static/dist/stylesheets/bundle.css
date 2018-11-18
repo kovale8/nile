@@ -69,7 +69,7 @@ header h1 {
 }
 #product_reviews h1 {
   font-size: 2em;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 #product_reviews h2 {
   margin-bottom: 1em;
@@ -108,6 +108,21 @@ header h1 {
 #review_accepted a {
   margin: 5em;
   font-size: 1.25em;
+}
+
+#review_list {
+  margin-bottom: 3em;
+}
+
+.review {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #ddd;
+}
+.review .title {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
 }
 
 #product_view {

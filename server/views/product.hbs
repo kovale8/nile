@@ -12,10 +12,14 @@
 </section>
 <section id='product_reviews'>
     <h1>Customer Reviews</h1>
-    {{#each reviews}}
-        <div class='title'>{{this.title}}</div>
-        <div class='body'>{{this.body}}</div>
-    {{/each}}
+    <div id='review_list'>
+        {{#each reviews}}
+            <div class='review'>
+                <div class='title'>{{this.title}}</div>
+                <div class='body'>{{this.body}}</div>
+            </div>
+        {{/each}}
+    </div>
     <h2>Leave a review</h2>
     <form action='/review/{{product.id}}' method='POST'>
         <div class='form_element'>

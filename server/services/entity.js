@@ -11,8 +11,8 @@ class Entity {
         return this.query(`
             SELECT *
             FROM ${this.table}
-            WHERE id = ${id}
-        `).then(resultList => resultList[0]);
+            WHERE id = ?
+        `, [id]).then(resultList => resultList[0]);
     }
 
     getAll() {

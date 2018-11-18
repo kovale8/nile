@@ -3,7 +3,7 @@
 
     h1 {
         font-size: 2em;
-        margin-bottom: 1.5em;
+        margin-bottom: .5em;
     }
 
     h2 {
@@ -53,5 +53,21 @@
     a {
         margin: 5em;
         font-size: 1.25em;
+    }
+}
+
+#review_list {
+    margin-bottom: 3em;
+}
+
+.review {
+    padding: .5em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #ddd;
+
+    .title {
+        font-size: 1.25em;
+        font-weight: 600;
+        margin-bottom: .5em;
     }
 }
