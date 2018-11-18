@@ -29,10 +29,6 @@ const fn = {
                 else resolve(formatKeys(results));
             });
         });
-    },
-
-    queryOne(sql) {
-        return this.query(sql).then(results => results[0]);
     }
 };
 

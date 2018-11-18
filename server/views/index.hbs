@@ -3,9 +3,11 @@
     Welcome to the Nile online shopping experience. Choose from the products
     below.
 </p>
-<section id="product_list">
+<section id='product_list'>
     {{#each products}}
-        <div class="product">
+        <div class='product'>
+            <img class='product_image'
+                 src={{this.imageUrl}} />
             <h3>{{this.name}}</h3>
             <span>{{this.description}}</span>
             <span>{{this.price}}</span>

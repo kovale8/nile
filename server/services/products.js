@@ -1,12 +1,16 @@
-const db = require('../db');
+const Entity = require('./entity');
 
-const products = {
-    getAll() {
-        return db.query(`
-            SELECT *
-            FROM products
-        `);
+const IMAGE_URL_PREFIX = 'https://s3.amazonaws.com/nile-product-images/';
+
+class Products extends Entity {
+
+    constructor() {
+        super('products', products => {
+            for (const product of products)
+                product.imageUrl = IMAGE_URL_PREFIX + product.imageName;
+            return products;
+        });
     }
-};
+}
 
-module.exports = products;
+module.exports = new Products();
