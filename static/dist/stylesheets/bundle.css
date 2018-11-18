@@ -102,6 +102,14 @@ header h1 {
   margin-bottom: 1.5em;
 }
 
+#review_accepted h1 {
+  margin: 2em;
+}
+#review_accepted a {
+  margin: 5em;
+  font-size: 1.25em;
+}
+
 #product_view {
   display: flex;
   margin-top: 2em;

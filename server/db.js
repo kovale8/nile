@@ -9,6 +9,9 @@ const pool = mysql.createPool({
 });
 
 function formatKeys(rows) {
+    if (!(rows instanceof Array))
+        return rows;
+
     return rows.map(row => {
         const newRow = {};
         const keys = Object.keys(row);
@@ -22,9 +25,9 @@ function formatKeys(rows) {
 }
 
 const fn = {
-    query(sql) {
+    query(sql, values) {
         return new Promise((resolve, reject) => {
-            pool.query(sql, (error, results) => {
+            pool.query(sql, values, (error, results) => {
                 if (error) reject(error);
                 else resolve(formatKeys(results));
             });

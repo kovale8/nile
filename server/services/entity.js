@@ -22,8 +22,13 @@ class Entity {
         `);
     }
 
-    query(sql) {
-        return db.query(sql).then(this.processFn);
+    query(sql, values) {
+        return db.query(sql, values)
+        .then(resultList => {
+            if (this.processFn)
+                this.processFn(resultList);
+            return resultList;
+        });
     }
 }
 
