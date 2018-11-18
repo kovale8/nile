@@ -1,9 +1,13 @@
 <section id='product_list'>
     {{#each products}}
         <div class='product'>
-            <img src={{this.imageUrl}} />
+            <a href='/product/{{this.id}}'>
+                <img src={{this.imageUrl}} />
+            </a>
             <div class='details'>
-                <div class='title'>{{this.name}}</div>
+                <a href='/product/{{this.id}}'>
+                    <div class='title'>{{this.name}}</div>
+                </a>
                 <div class='price'>{{this.price}}</div>
                 <div class='description'>{{this.description}}</div>
             </div>
