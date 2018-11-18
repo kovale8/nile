@@ -7,11 +7,23 @@ class Entity {
         this.processFn = processFn;
     }
 
-    getAll() {
-        return db.query(`
+    get(id) {
+        return this.query(`
             SELECT *
             FROM ${this.table}
-        `).then(this.processFn);
+            WHERE id = ${id}
+        `).then(resultList => resultList[0]);
+    }
+
+    getAll() {
+        return this.query(`
+            SELECT *
+            FROM ${this.table}
+        `);
+    }
+
+    query(sql) {
+        return db.query(sql).then(this.processFn);
     }
 }
 
