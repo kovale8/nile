@@ -64,9 +64,14 @@ header h1 {
   margin-bottom: 0.5em;
 }
 
+#product_reviews h1 {
+  font-size: 2em;
+}
+
 #product_view {
   display: flex;
   margin-top: 2em;
+  margin-bottom: 3em;
 }
 #product_view img {
   height: 40em;

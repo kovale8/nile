@@ -10,3 +10,10 @@
         <div class='description'>{{product.description}}</div>
     </div>
 </section>
+<section id='product_reviews'>
+    <h1>Customer Reviews</h1>
+    {{#each reviews}}
+        <div class='title'>{{this.title}}</div>
+        <div class='body'>{{this.body}}</div>
+    {{/each}}
+</section>
