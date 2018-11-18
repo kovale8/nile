@@ -1,2 +1,14 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}. This is a Pipeline test.</p>
+<p>
+    Welcome to the Nile online shopping experience. Choose from the products
+    below.
+</p>
+<section id="product_list">
+    {{#each products}}
+        <div class="product">
+            <h3>{{this.name}}</h3>
+            <span>{{this.descrption}}</span>
+            <span>{{this.price}}</span>
+        </div>
+    {{/each}}
+</section>
