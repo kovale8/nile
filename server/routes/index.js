@@ -5,6 +5,7 @@ router.get('/', (req, res) => {
     products.getAll()
     .then(productList => res.render('index', {
         title: 'Online Shopping',
+        style: 'product_list',
         products: productList
     }));
 });

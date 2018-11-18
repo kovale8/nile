@@ -1,12 +1,11 @@
 <section id='product_list'>
     {{#each products}}
         <div class='product'>
-            <img class='product_image'
-                 src={{this.imageUrl}} />
-            <div class='product_details'>
-                <div class='product_title'>{{this.name}}</div>
-                <div class='product_price'>{{this.price}}</div>
-                <div class='product_description'>{{this.description}}</div>
+            <img src={{this.imageUrl}} />
+            <div class='details'>
+                <div class='title'>{{this.name}}</div>
+                <div class='price'>{{this.price}}</div>
+                <div class='description'>{{this.description}}</div>
             </div>
         </div>
     {{/each}}

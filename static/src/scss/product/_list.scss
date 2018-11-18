@@ -1,0 +1,32 @@
+#product_list {
+    .product {
+        display: flex;
+        border-bottom: 2px solid #ddd;
+        margin-top: 2em;
+    }
+
+    img {
+        height: 20em;
+        padding: 2px;
+    }
+
+    .description {
+        color: #333;
+    }
+
+    .details {
+        padding: 2em;
+    }
+
+    .price {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 2em;
+    }
+
+    .title {
+        font-size: 2em;
+        font-weight: 500;
+        margin-bottom: .5em;
+    }
+}

@@ -1,0 +1,56 @@
+header {
+  background-color: #004d80;
+  color: white;
+  padding: 50px;
+  box-shadow: 0 2px 4px 2px #aaa;
+}
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  background-color: #004d80;
+  color: white;
+  padding: 50px;
+  box-shadow: 0 2px 4px 2px #aaa;
+}
+header h1 {
+  margin-bottom: 0.5em;
+}
+
+#product_list .product {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+  margin-top: 2em;
+}
+#product_list img {
+  height: 20em;
+  padding: 2px;
+}
+#product_list .description {
+  color: #333;
+}
+#product_list .details {
+  padding: 2em;
+}
+#product_list .price {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+#product_list .title {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+/*# sourceMappingURL=bundle.css.map */
