@@ -8,9 +8,11 @@
         <div class='product'>
             <img class='product_image'
                  src={{this.imageUrl}} />
-            <h3>{{this.name}}</h3>
-            <span>{{this.description}}</span>
-            <span>{{this.price}}</span>
+            <div class='product_details'>
+                <div class='product_title'>{{this.name}}</div>
+                <div class='product_price'>{{this.price}}</div>
+                <div class='product_description'>{{this.description}}</div>
+            </div>
         </div>
     {{/each}}
 </section>

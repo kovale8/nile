@@ -6,3 +6,33 @@ body {
 a {
   color: #00B7FF;
 }
+
+.product {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+}
+
+.product_description {
+    color: #333;
+}
+
+.product_details {
+    padding: 2em;
+}
+
+.product_image {
+    height: 20em;
+    padding: 2px;
+}
+
+.product_price {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 2em;
+}
+
+.product_title {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
