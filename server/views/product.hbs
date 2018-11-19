@@ -3,8 +3,11 @@
     <div class='overview'>
         <div class='title'>
             <h1 class='name'>{{product.name}}</h1>
-            <div class='price'>
-                Price: <span>{{product.price}}</span>
+            <div class='detail'>
+                Price: <span class='price'>{{product.price}}</span>
+            </div>
+            <div class='detail'>
+                Sentiment: <span class='sentiment {{sentiment}}'>{{sentiment}}</span>
             </div>
         </div>
         <div class='description'>{{product.description}}</div>

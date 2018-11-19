@@ -134,6 +134,32 @@ header h1 {
   height: 40em;
   padding: 2px;
 }
+#product_view .detail {
+  display: flex;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+#product_view .detail .price {
+  margin-left: 0.5em;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #B12704;
+}
+#product_view .detail .sentiment {
+  margin-left: 0.5em;
+  font-size: 1em;
+  font-weight: 600;
+}
+#product_view .detail .sentiment.positive {
+  color: #5ec907;
+}
+#product_view .detail .sentiment.neutral {
+  color: #0067bb;
+}
+#product_view .detail .sentiment.negative {
+  color: #bb1111;
+}
 #product_view .name {
   font-size: 3em;
   font-weight: 500;
@@ -142,20 +168,9 @@ header h1 {
 #product_view .overview {
   width: 100%;
 }
-#product_view .price {
-  display: flex;
-  margin-left: 1em;
-  margin-bottom: 1em;
-  color: #333;
-}
-#product_view .price span {
-  margin-left: 0.5em;
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #B12704;
-}
 #product_view .title {
   margin-bottom: 3em;
+  padding-bottom: 1em;
   border-bottom: 2px solid #ddd;
 }
 

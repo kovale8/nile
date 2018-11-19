@@ -14,11 +14,13 @@ router.get('/', (req, res) => {
 router.get('/product/:id', async (req, res) => {
     const product = await products.get(req.params.id);
     const productReviews = await reviews.getReviewsForProduct(product.id);
+    let sentiment = await reviews.getProductSentiment(product.id);
 
     res.render('product', {
         title:  `: ${product.name}`,
+        reviews: productReviews,
         product,
-        reviews: productReviews
+        sentiment
     })
 });
 
