@@ -40,19 +40,30 @@
         }
     }
 
-    .name {
-        font-size: 3em;
-        font-weight: 500;
-        margin-bottom: .25em;
+    .heading {
+        margin-bottom: 3em;
+        padding-bottom: 1em;
+        border-bottom: 2px solid #ddd;
     }
 
     .overview {
         width: 100%;
+        margin-right: 1em;
     }
 
     .title {
-        margin-bottom: 3em;
-        padding-bottom: 1em;
-        border-bottom: 2px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 500;
+            margin-bottom: .25em;
+        }
+
+        a {
+            font-size: 1.25em;
+            padding: 5px;
+        }
     }
 }
