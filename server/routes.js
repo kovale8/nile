@@ -13,11 +13,7 @@ router.get('/', (req, res) => {
 
 router.get('/product/:id', async (req, res) => {
     const product = await products.get(req.params.id);
-    const productReviews = await reviews.query(`
-        SELECT *
-        FROM ${reviews.table}
-        WHERE product_id = ?
-    `, [product.id]);
+    const productReviews = await reviews.getReviewsForProduct(product.id);
 
     res.render('product', {
         title:  `: ${product.name}`,
