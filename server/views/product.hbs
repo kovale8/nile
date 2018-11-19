@@ -7,7 +7,9 @@
                 Price: <span class='price'>{{product.price}}</span>
             </div>
             <div class='detail'>
-                Sentiment: <span class='sentiment {{sentiment}}'>{{sentiment}}</span>
+                Sentiment: <span class='sentiment {{sentiment}}'>
+                    {{{capitalize sentiment}}}
+                </span>
             </div>
         </div>
         <div class='description'>{{product.description}}</div>

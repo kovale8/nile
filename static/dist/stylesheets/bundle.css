@@ -148,7 +148,7 @@ header h1 {
 }
 #product_view .detail .sentiment {
   margin-left: 0.5em;
-  font-size: 1em;
+  font-size: 1.25em;
   font-weight: 600;
 }
 #product_view .detail .sentiment.positive {
