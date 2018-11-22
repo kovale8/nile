@@ -4,7 +4,17 @@
         <div class='heading'>
             <div class='title'>
                 <h1>{{product.name}}</h1>
-                <a>Share</a>
+                <a id='share_link'>Share</a>
+                {{#>floatbox
+                    class='share'
+                    title='Share this product via Email'
+                }}
+                    {{#*inline 'content'}}
+                        <span class='share__label'>Email:</span>
+                        <input type='email' class='share__input'>
+                        <button type='button'>Send</button>
+                    {{/inline}}
+                {{/floatbox}}
             </div>
             <div class='detail'>
                 Price: <span class='price'>{{product.price}}</span>

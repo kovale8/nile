@@ -1,0 +1,25 @@
+.floatbox {
+    position: absolute;
+    margin: 15px;
+    outline: 2px solid #ccc;
+    background: white;
+    box-shadow: 7px 7px 12px -9px #777;
+    user-select: none;
+
+    .content {
+        padding: 5px;
+        font-size: 1.25em;
+    }
+
+    .title {
+        padding: 5px;
+        color: white;
+        background: #aaa;
+        font-size: 1.25em;
+        font-weight: 600;
+    }
+}
+
+.floatbox--hidden {
+    display: none;
+}

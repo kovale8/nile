@@ -67,3 +67,14 @@
         }
     }
 }
+
+.share {
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.share__input {
+    width: 100%;
+}

@@ -184,4 +184,37 @@ header h1 {
   padding: 5px;
 }
 
+.share .content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.share__input {
+  width: 100%;
+}
+
+.floatbox {
+  position: absolute;
+  margin: 15px;
+  outline: 2px solid #ccc;
+  background: white;
+  box-shadow: 7px 7px 12px -9px #777;
+  user-select: none;
+}
+.floatbox .content {
+  padding: 5px;
+  font-size: 1.25em;
+}
+.floatbox .title {
+  padding: 5px;
+  color: white;
+  background: #aaa;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.floatbox--hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=bundle.css.map */
