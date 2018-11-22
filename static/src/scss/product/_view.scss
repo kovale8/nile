@@ -69,6 +69,8 @@
 }
 
 .share {
+    width: 25em;
+
     .content {
         display: flex;
         justify-content: space-between;
@@ -77,4 +79,12 @@
 
 .share__input {
     width: 100%;
+}
+
+.share__send_button {
+    background: #444;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    width: 30%;
 }

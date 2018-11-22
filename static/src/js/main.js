@@ -1,9 +1,12 @@
-import Floatbox from './floatbox.js';
+import Floatbox from './floatbox';
 
 const shareLink = document.getElementById('share_link');
 const shareBox = new Floatbox('share');
 
-window.box = shareBox;
-
-shareLink.addEventListener('click', () =>
-    shareBox.toggle());
+shareLink.addEventListener('click', event => {
+    shareBox.toggle();
+    shareBox.setPosition(
+        event.clientX - shareBox.element.offsetWidth,
+        event.clientY
+    );
+});
