@@ -42,7 +42,8 @@ router.post('/review/:id', (req, res) => {
 });
 
 router.get('/share/:email-:id', (req, res) => {
-    mailer.shareProduct(req.params.email, products.get(req.params.id))
+    products.get(req.params.id)
+    .then(product => mailer.shareProduct(req.params.email, product))
     .then(() => res.sendStatus(202));
 });
 

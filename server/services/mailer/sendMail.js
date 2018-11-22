@@ -1,34 +1,32 @@
 const AWS = require('../aws');
-const hbs = require('hbs');
 
 const ses = new AWS.SES();
 
-let params = `{
-    "Destination": {
-        "ToAddresses": ["{{toAddress}}"]
+const params = {
+    Destination: {
+        ToAddresses: []
     },
-    "Message": {
-        "Body": {
-            "Html": {
-                "Charset": "UTF-8",
-                "Data": "{{body}}"
+    Message: {
+        Body: {
+            Html: {
+                Charset: 'UTF-8',
+                Data: ''
             }
         },
-        "Subject": {
-            "Charset": "UTF-8",
-            "Data": "{{subject}}"
+        Subject: {
+            Charset: 'UTF-8',
+            Data: ''
         }
     },
-    "Source": "${process.env.SENDER_EMAIL}"
-}`;
-params = hbs.compile(params);
+    Source: process.env.SENDER_EMAIL
+};
 
 function sendMail(options) {
-    return ses.sendEmail(JSON.parse(params({
-        toAddress: options.toAddress,
-        subject: options.subject,
-        body: options.body
-    }))).promise();
+    params.Destination.ToAddresses = [options.toAddress];
+    params.Message.Body.Html.Data = options.body;
+    params.Message.Subject.Data = options.subject;
+
+    return ses.sendEmail(params).promise();
 }
 
-module.exports = { sendMail };
+module.exports = sendMail;

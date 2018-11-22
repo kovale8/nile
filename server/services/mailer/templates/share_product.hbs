@@ -2,10 +2,17 @@
 <html>
     <head>
         <title>Nile Online Shopping</title>
+        <style>
+            .product_image {
+                width: 100px;
+            }
+        </style>
     </head>
     <body>
+        <img src='{{site}}/static/images/ship-wheel-icon.png'/>
         <h1>Nile Online Shopping</h1>
         <h2>We thought you might be interested in this product!</h2>
-        <p>Check out the {{product.name}}!</p>
+        <img class='product_image' src='{{product.imageUrl}}'/>
+        <p>Check out <a href='{{site}}/product/{{product.id}}'>{{product.name}}</a>!</p>
     </body>
 </html>
