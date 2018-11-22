@@ -18,6 +18,10 @@ class Floatbox {
         return this.element.classList.contains(Floatbox.hiddenClass);
     }
 
+    select(selector) {
+        return this.element.querySelector(selector);
+    }
+
     setPosition(x, y) {
         this.element.style.left = `${x}px`;
         this.element.style.top = `${y}px`;

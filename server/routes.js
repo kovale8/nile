@@ -24,8 +24,7 @@ router.get('/product/:id', async (req, res) => {
     })
 });
 
-router.route('/review/:id')
-.post((req, res) => {
+router.post('/review/:id', (req, res) => {
     const productId = req.params.id;
 
     reviews.submitReview(
@@ -39,6 +38,11 @@ router.route('/review/:id')
         title: 'Product Review',
         product
     }));
+});
+
+router.get('/share/:email-:id', (req, res) => {
+    console.log(req.params.id + ' is sharing to ' + req.params.email);
+    res.sendStatus(202);
 });
 
 module.exports = router;

@@ -1,3 +1,4 @@
+import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 
 const config = {
@@ -8,6 +9,9 @@ const config = {
         sourcemap: 'inline'
     },
     plugins: [
+        commonjs({
+            sourceMap: false
+        }),
         resolve()
     ]
 };
