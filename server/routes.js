@@ -1,3 +1,4 @@
+const mailer = require('./services/mailer');
 const products = require('./services/products');
 const reviews = require('./services/reviews');
 const router = require('express').Router();
@@ -41,8 +42,8 @@ router.post('/review/:id', (req, res) => {
 });
 
 router.get('/share/:email-:id', (req, res) => {
-    console.log(req.params.id + ' is sharing to ' + req.params.email);
-    res.sendStatus(202);
+    mailer.shareProduct(req.params.email, products.get(req.params.id))
+    .then(() => res.sendStatus(202));
 });
 
 module.exports = router;

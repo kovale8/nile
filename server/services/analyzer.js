@@ -1,6 +1,4 @@
-const AWS = require('aws-sdk');
-
-AWS.config.update({region: 'us-east-1'});
+const AWS = require('./aws');
 
 const comprehend = new AWS.Comprehend();
 const params = {
