@@ -3,14 +3,25 @@
     <head>
         <title>Nile Online Shopping</title>
         <style>
-            .product_image {
+            header {
+                display: flex;
+            }
+
+            .logo {
                 width: 100px;
+                height: 100px;
+            }
+
+            .product_image {
+                width: 300px;
             }
         </style>
     </head>
     <body>
-        <img src='{{site}}/static/images/ship-wheel-icon.png'/>
-        <h1>Nile Online Shopping</h1>
+        <header>
+            <img class='logo' src='{{site}}/static/images/ship-wheel-icon.png'/>
+            <h1>Nile Online Shopping</h1>
+        </header>
         <h2>We thought you might be interested in this product!</h2>
         <img class='product_image' src='{{product.imageUrl}}'/>
         <p>Check out <a href='{{site}}/product/{{product.id}}'>{{product.name}}</a>!</p>
